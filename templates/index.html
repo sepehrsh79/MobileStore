@@ -10,76 +10,111 @@
 </head>
 <body dir="rtl">
 <div class="container pt-4 text-center">
-    <div id='d1' class="border border-dark border-3 py-3">
-        <h2 class="pb-2"> فرم ثبت موبایل</h2>
-        <form method="post" action=''>
-            {% csrf_token %}
-            <div class="mb-2">
-                <label id='l1' class='form-label' for="{{ form.brand_name.id_for_label }}">{{ form.brand_name.label }}</label>
-                <br>
-                {{ form.brand_name }}
-                {% for error in brand_name.username.errors %}
-                <P style="color: red">{{ error }}</P>
-                {% endfor %}                  
-            </div>
-            <div class="mb-2">
-                <label id='l2' class='form-label' for="{{ form.brand_nationality.id_for_label }}">{{ form.brand_nationality.label }}</label>
-                <br>
-                {{ form.brand_nationality }}
-                {% for error in form.email.errors %}
-                <P style="color: red">{{ error }}</P>
-                {% endfor %}
-            </div>
-            <div class="mb-2">
-                <label id='l3' class='form-label' for="{{ form.model.id_for_label }}">{{ form.model.label }}</label>
-                <br>
-                {{ form.model }}
-                {% for error in form.model.errors %}
-                <P style="color: #ff0000">{{ error }}</P>
-                {% endfor %}
-            </div>
-            <div class="mb-2">
-                <label id='l4' class='form-label' for="{{ form.price.id_for_label }}">{{ form.price.label }}</label>
-                <br>
-                {{ form.price }}
-                {% for error in form.price.errors %}
-                <P style="color: #ff0000">{{ error }}</P>
-                {% endfor %}
-            </div>
-            <div class="mb-2">
-                <label id='l5' class='form-label' for="{{ form.color.id_for_label }}">{{ form.color.label }}</label>
-                <br>
-                {{ form.color }}
-                {% for error in form.color.errors %}
-                <P style="color: #ff0000">{{ error }}</P>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label id='l6' class='form-label' for="{{ form.resulation.id_for_label }}">{{ form.resulation.label }}</label>
-                <br>
-                {{ form.resulation }}
-                {% for error in form.resulation.errors %}
-                <P style="color: #ff0000">{{ error }}</P>
-                {% endfor %}
-            </div>
-            <div class="mb-2">
-                <label id='l8' class='form-label' for="{{ form.manufacturer.id_for_label }}">{{ form.manufacturer.label }}</label>
-                <br>
-                {{ form.manufacturer }}
-                {% for error in form.manufacturer.errors %}
-                <P style="color: #ff0000">{{ error }}</P>
-                {% endfor %}
-            </div>
-            <div class="mb-2">
-                <label id='l7' class='form-label' for="{{ form.is_available.id_for_label }}">{{ form.is_available.label }}</label>
-                {{ form.is_available }}
-                {% for error in form.is_availale.errors %}
-                <P style="color: #ff0000">{{ error }}</P>
-                {% endfor %}
-            </div>
-
-            <button id='btn' type="submit" class="btn btn-md btn-primary w-25">ثبت</button>
-        </form>
+    <div class="row" style="margin-right: 120px;">
+        <div id="d1" class="col-6 border border-dark border-3 pt-5 ">
+            <h2 class="pb-4"> فرم ثبت موبایل</h2>
+            <form method="post" action=''>
+                {% csrf_token %}
+                <div class="mb-2">
+                    <label id='l1' class='form-label' for="{{ form.brand_name.id_for_label }}">{{ form.brand_name.label }}</label>
+                    <br>
+                    {{ form.brand_name }}
+                    {% for error in brand_name.username.errors %}
+                    <P style="color: red">{{ error }}</P>
+                    {% endfor %}                  
+                </div>
+                <div class="mb-2">
+                    <label id='l2' class='form-label' for="{{ form.brand_nationality.id_for_label }}">{{ form.brand_nationality.label }}</label>
+                    <br>
+                    {{ form.brand_nationality }}
+                    {% for error in form.email.errors %}
+                    <P style="color: red">{{ error }}</P>
+                    {% endfor %}
+                </div>
+                <div class="mb-2">
+                    <label id='l3' class='form-label' for="{{ form.model.id_for_label }}">{{ form.model.label }}</label>
+                    <br>
+                    {{ form.model }}
+                    {% for error in form.model.errors %}
+                    <P style="color: #ff0000">{{ error }}</P>
+                    {% endfor %}
+                </div>
+                <div class="mb-2">
+                    <label id='l4' class='form-label' for="{{ form.price.id_for_label }}">{{ form.price.label }}</label>
+                    <br>
+                    {{ form.price }}
+                    {% for error in form.price.errors %}
+                    <P style="color: #ff0000">{{ error }}</P>
+                    {% endfor %}
+                </div>
+                <div class="mb-2">
+                    <label id='l5' class='form-label' for="{{ form.color.id_for_label }}">{{ form.color.label }}</label>
+                    <br>
+                    {{ form.color }}
+                    {% for error in form.color.errors %}
+                    <P style="color: #ff0000">{{ error }}</P>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    <label id='l6' class='form-label' for="{{ form.resulation.id_for_label }}">{{ form.resulation.label }}</label>
+                    <br>
+                    {{ form.resulation }}
+                    {% for error in form.resulation.errors %}
+                    <P style="color: #ff0000">{{ error }}</P>
+                    {% endfor %}
+                </div>
+                <div class="mb-2">
+                    <label id='l8' class='form-label' for="{{ form.manufacturer.id_for_label }}">{{ form.manufacturer.label }}</label>
+                    <br>
+                    {{ form.manufacturer }}
+                    {% for error in form.manufacturer.errors %}
+                    <P style="color: #ff0000">{{ error }}</P>
+                    {% endfor %}
+                </div>
+                <div class="mb-2">
+                    <label id='l7' class='form-label' for="{{ form.is_available.id_for_label }}">{{ form.is_available.label }}</label>
+                    {{ form.is_available }}
+                    {% for error in form.is_availale.errors %}
+                    <P style="color: #ff0000">{{ error }}</P>
+                    {% endfor %}
+                </div>
+    
+                <button id='btn' type="submit" class="btn btn-md btn-primary w-25">ثبت</button>
+            </form>
+        </div>
+        <div id="d2" class="col-6 pt-5 border border-dark border-3">
+            <h2 class="pb-3"> گزارشات</h2>
+            <div id="c1" class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title pb-2">گزارش ۱</h5>
+                  <p class="card-text">لیست تمامی برندهایی که ملیت آنها  Korea است .</p>
+                  <br>
+                  <a href="/report1" class="btn btn-primary">نمایش</a>
+                </div>
+              </div>
+              
+              <div id="c1" class="card mb-4 ">
+                <div class="card-body">
+                  <h5 class="card-title pb-2"">گزارش ۲</h5>
+                  <p class="card-text">برند مورد نظر خود را وارد کنید.</p>
+                  <form method="get" action="/report2"> 
+                    {% csrf_token %}
+                    <input class="form-control-sm" value="{{request.GET.q}}" name="q" type="text">
+                    <button class="btn btn-primary">نمایش</a>
+                  </form>
+                  
+                </div>
+              </div>
+              
+              <div id="c1" class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title pb-2"">گزارش ۳</h5>
+                  <p class="card-text">لیست تمامی موبایلهایی که ملیت برند با کشور سازندهی آن برابر است.</p>
+                  <a href="/report3" class="btn btn-primary">نمایش</a>
+                </div>
+              </div>
+        </div>
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

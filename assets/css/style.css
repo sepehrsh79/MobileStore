@@ -14,7 +14,11 @@ h2{
 #d1{
   background-color:white !important;
   width: 500px;
-  margin:auto;
+}
+#d2{
+  background-color:white !important;
+  width: 500px;
+  margin-right: 10px;
 }
 #l1{
   padding-left:150px;
@@ -39,4 +43,7 @@ h2{
 }
 #l8{
   padding-left:120px;
+}
+#c1,#c2,#c3{
+  height: 180px !important;
 }
