@@ -1,0 +1,42 @@
+@font-face{
+  font-family: 'samim';
+  src: url('../fonts/samim-font-v2.0.1/Samim.eot');
+  src: url('../fonts/samim-font-v2.0.1/Samim.woff') format('woff');
+}
+body{
+  background-color: rgb(14, 94, 168) !important;
+  font-family:samim !important ;
+}
+h2{
+  font-size:28px !important;
+  font-style: bold !important;
+}
+#d1{
+  background-color:white !important;
+  width: 500px;
+  margin:auto;
+}
+#l1{
+  padding-left:150px;
+}
+#l2{
+  padding-left:140px;
+}
+#l3{
+  padding-left:130px;  
+}
+#l4{
+  padding-left:165px;
+}
+#l5{
+  padding-left:5px;
+}
+#l6{
+  padding-left:80px;
+}
+#l7{
+  padding-left:20px;  
+}
+#l8{
+  padding-left:120px;
+}

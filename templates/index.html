@@ -1,0 +1,88 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store</title>
+    <link href={% static "css/style.css" %} rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
+</head>
+<body dir="rtl">
+<div class="container pt-4 text-center">
+    <div id='d1' class="border border-dark border-3 py-3">
+        <h2 class="pb-2"> فرم ثبت موبایل</h2>
+        <form method="post" action=''>
+            {% csrf_token %}
+            <div class="mb-2">
+                <label id='l1' class='form-label' for="{{ form.brand_name.id_for_label }}">{{ form.brand_name.label }}</label>
+                <br>
+                {{ form.brand_name }}
+                {% for error in brand_name.username.errors %}
+                <P style="color: red">{{ error }}</P>
+                {% endfor %}                  
+            </div>
+            <div class="mb-2">
+                <label id='l2' class='form-label' for="{{ form.brand_nationality.id_for_label }}">{{ form.brand_nationality.label }}</label>
+                <br>
+                {{ form.brand_nationality }}
+                {% for error in form.email.errors %}
+                <P style="color: red">{{ error }}</P>
+                {% endfor %}
+            </div>
+            <div class="mb-2">
+                <label id='l3' class='form-label' for="{{ form.model.id_for_label }}">{{ form.model.label }}</label>
+                <br>
+                {{ form.model }}
+                {% for error in form.model.errors %}
+                <P style="color: #ff0000">{{ error }}</P>
+                {% endfor %}
+            </div>
+            <div class="mb-2">
+                <label id='l4' class='form-label' for="{{ form.price.id_for_label }}">{{ form.price.label }}</label>
+                <br>
+                {{ form.price }}
+                {% for error in form.price.errors %}
+                <P style="color: #ff0000">{{ error }}</P>
+                {% endfor %}
+            </div>
+            <div class="mb-2">
+                <label id='l5' class='form-label' for="{{ form.color.id_for_label }}">{{ form.color.label }}</label>
+                <br>
+                {{ form.color }}
+                {% for error in form.color.errors %}
+                <P style="color: #ff0000">{{ error }}</P>
+                {% endfor %}
+            </div>
+            <div class="mb-3">
+                <label id='l6' class='form-label' for="{{ form.resulation.id_for_label }}">{{ form.resulation.label }}</label>
+                <br>
+                {{ form.resulation }}
+                {% for error in form.resulation.errors %}
+                <P style="color: #ff0000">{{ error }}</P>
+                {% endfor %}
+            </div>
+            <div class="mb-2">
+                <label id='l8' class='form-label' for="{{ form.manufacturer.id_for_label }}">{{ form.manufacturer.label }}</label>
+                <br>
+                {{ form.manufacturer }}
+                {% for error in form.manufacturer.errors %}
+                <P style="color: #ff0000">{{ error }}</P>
+                {% endfor %}
+            </div>
+            <div class="mb-2">
+                <label id='l7' class='form-label' for="{{ form.is_available.id_for_label }}">{{ form.is_available.label }}</label>
+                {{ form.is_available }}
+                {% for error in form.is_availale.errors %}
+                <P style="color: #ff0000">{{ error }}</P>
+                {% endfor %}
+            </div>
+
+            <button id='btn' type="submit" class="btn btn-md btn-primary w-25">ثبت</button>
+        </form>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
