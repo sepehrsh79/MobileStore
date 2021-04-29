@@ -20,7 +20,8 @@ from MobileStore import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mobiles.urls'))
+    path('', include('mobiles.urls')),
+    path('', include('reports.urls')),
 ]
 
 
