@@ -4,6 +4,7 @@ from mobiles.models import Mobile
 
 def create_mobile(request):
     
+    #check the form validation and get datas from form
     mobile_form = MobileForm(request.POST or None)
     if mobile_form.is_valid():
         brand_name = mobile_form.cleaned_data.get('brand_name')
@@ -14,7 +15,8 @@ def create_mobile(request):
         resulation = mobile_form.cleaned_data.get('resulation')
         is_available = mobile_form.cleaned_data.get('is_available')
         manufacturer = mobile_form.cleaned_data.get('manufacturer')
-
+        
+        #create a Mobile object in DataBase 
         Mobile.objects.create(
             brand_name = brand_name, 
             brand_nationality = brand_nationality,
