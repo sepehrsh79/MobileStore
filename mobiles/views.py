@@ -27,8 +27,8 @@ def create_mobile(request):
             is_available = is_available,
             manufacturer = manufacturer)
 
-        mobile_form = MobileForm()    
-
+        mobile_form = MobileForm()  
+        
     context= {
         'form' : mobile_form
     }

@@ -16,7 +16,7 @@ def report2(request,*args, **kwargs):
     
     #filter a query with input model name
     selected_model = request.GET.get("q")
-    models = Mobile.objects.filter(model=selected_model)
+    models = Mobile.objects.filter(brand_name=selected_model)
     serialized_mobiles = serializers.serialize("json", models)
     return JsonResponse(serialized_mobiles, safe=False)
 
