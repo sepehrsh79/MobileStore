@@ -14,10 +14,10 @@ def report1(request):
 
 def report2(request,*args, **kwargs):
     
-    #filter a query with input model name
-    selected_model = request.GET.get("q")
-    models = Mobile.objects.filter(brand_name=selected_model)
-    serialized_mobiles = serializers.serialize("json", models)
+    #filter a query with input brand name
+    selected_brand = request.GET.get("q")
+    brands = Mobile.objects.filter(brand_name=selected_brand)
+    serialized_mobiles = serializers.serialize("json", brands)
     return JsonResponse(serialized_mobiles, safe=False)
 
 def report3(request):
