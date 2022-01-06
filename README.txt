@@ -1,6 +1,6 @@
 MobileStoreShop
 
-MobileStoreShop is a Website to save and manage Mobile datas in DataBase.
+MobileStoreShop is a Website to save and manage Mobile data in DataBase.
 
 #Installation
 
